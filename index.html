@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL Geo — Portfólio Corporativo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="brand-section">
+        <!-- Substitua 'logo.png' pelo arquivo da marca -->
+        <img src="logo.jpeg" alt="SL Geo" class="brand-image">
+        <div class="brand-info">
+          <h1>SL Geo</h1>
+          <p class="brand-title">Soluções Geoespaciais Corporativas</p>
+          <p class="brand-description">A SL Geo oferece soluções integradas em geotecnologias: mapeamento, monitoramento ambiental, análises espaciais e desenvolvimento de plataformas WebGIS e dashboards para apoiar decisões estratégicas.</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Clientes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7+</span>
+          <span class="stat-label">Anos de Mercado</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </div>
+      <div class="social-links-nav">
+        <a href="https://github.com/silviogeo2022/silviogeo2022" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/silvio-lemos-75219096/" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:silviolemosamb@gmail.com" class="social-link" aria-label="E-mail">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="sobre" class="about-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title">Sobre a SL Geo</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>SL Geo é uma empresa especializada em soluções geoespaciais que integra ciência de dados, sensoriamento remoto e engenharia de dados para entregar produtos e serviços de alto valor para clientes dos setores público e privado. Nossas entregas incluem: plataformas WebGIS, pipelines de dados geoespaciais, dashboards analíticos e modelos de GeoAI para monitoramento, conformidade ambiental e suporte à tomada de decisão.</p>
+            <div class="skills-highlight">
+              <div class="skill-item scroll-reveal-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Análises Espaciais Avançadas</span>
+              </div>
+              <div class="skill-item scroll-reveal-item">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Plataformas WebGIS & Dashboards</span>
+              </div>
+              <div class="skill-item scroll-reveal-item">
+                <i class="fas fa-satellite-dish"></i>
+                <span>Monitoramento por Sensoriamento Remoto</span>
+              </div>
+              <div class="skill-item scroll-reveal-item">
+                <i class="fas fa-gear"></i>
+                <span>Engenharia de Dados & Automação</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects-section scroll-reveal">
+      <div class="container">
+        <div class="projects-header">
+          <h2 class="section-title">Projetos</h2>
+          <p class="section-subtitle">Projetos e soluções desenvolvidas pela SL Geo</p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+          <button class="filter-btn" data-filter="bi">Dashboards</button>
+          <button class="filter-btn" data-filter="dados">WebMaps</button>
+          <button class="filter-btn" data-filter="artigos">Artigos</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/streamlit_app_personal/blob/main/previsao_chuvas.jpg?raw=true" alt="Monitoramento Previsão de Chuvas">
+              <div class="project-overlay">
+                <span class="project-tag">Fullstack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Monitoramento Previsão de Chuvas</h3>
+              <p class="project-description">Automação de previsão pluviométrica para 3 dias com visualização e alertas.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">WeatherAPI</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/silviogeo2022/sl_streamlit_projects" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://previsao-chuva-maedorio-pa.streamlit.app/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-play"></i> Aplicação
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/silviogeo2022/blob/main/inundacao%20mdr.png?raw=true" alt="Monitoramento de Pontos de Alagamento">
+              <div class="project-overlay">
+                <span class="project-tag">Fullstack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Monitoramento de Pontos de Alagamento</h3>
+              <p class="project-description">Painel para identificação e monitoramento de pontos críticos de alagamento.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/silviogeo2022/dadossegurancapublicapa" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://painel-monitoramento-pontos-alagamento.onrender.com/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-play"></i> Aplicação
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/silviogeo2022/blob/main/eros%C3%A3o%20costeira.png?raw=true" alt="Erosão Costeira">
+              <div class="project-overlay">
+                <span class="project-tag">Fullstack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Erosão Costeira — Baía da Traição</h3>
+              <p class="project-description">Monitoramento ambiental de erosão costeira com relatórios e mapas interativos.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/cartogeo-br/monitoramento_erosao" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://cartogeo-br.github.io/monitoramento_erosao/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-play"></i> Aplicação
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/silviogeo2022/blob/main/seguran%C3%A7a%20publica%20pa.png?raw=true" alt="Dados de Segurança Pública">
+              <div class="project-overlay">
+                <span class="project-tag">Fullstack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Dados de Segurança Pública — PA</h3>
+              <p class="project-description">Análises municipais de segurança pública com visualizações e dados georreferenciados.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/silviogeo2022/Dados_Seguranca_Publica" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://semusp-maedorio-pa.github.io/seguranca_publica_pa/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-play"></i> Aplicação
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/streamlit_app_personal/blob/main/pluviometria_GEE_APP.jpg?raw=true" alt="WebMap de Precipitação">
+              <div class="project-overlay">
+                <span class="project-tag">WebMap</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">WebMap de Precipitação Pluviométrica</h3>
+              <p class="project-description">WebMap construído em Google Earth Engine para monitoramento de precipitação no Brasil.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Google Earth Engine</span>
+                <span class="tech-tag">GCP</span>
+                <span class="tech-tag">BigQuery</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://xertica-gen-ai-br.projects.earthengine.app/view/monitoramento-de-pluviometria-no-brasil" target="_blank" class="btn-primary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/streamlit_app_personal/blob/main/queimadas_GEE_APP.jpg?raw=true" alt="Monitoramento de Queimadas">
+              <div class="project-overlay">
+                <span class="project-tag">WebMap</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Monitoramento de Queimadas</h3>
+              <p class="project-description">WebMap de monitoramento de queimadas para análise espacial e alertas.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Google Earth Engine</span>
+                <span class="tech-tag">GCP</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://xertica-gen-ai-br.projects.earthengine.app/view/monitoramento-de-queimadas-no-brasil" target="_blank" class="btn-primary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="bi">
+            <div class="project-image">
+              <img src="https://github.com/silviogeo2022/streamlit_app_personal/blob/main/supressao_vegetal.jpg?raw=true" alt="Supressão Vegetal">
+              <div class="project-overlay">
+                <span class="project-tag">Dashboards</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Monitoramento da Supressão Vegetal</h3>
+              <p class="project-description">Dashboard com dados históricos e análise da supressão vegetal.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Arcgis</span>
+                <span class="tech-tag">Dashboards</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://observatorio-social-1-uesc.hub.arcgis.com/pages/d72f7d8ccdba4cb0ac280060952ddcbd" target="_blank" class="btn-primary">
+                  <i class="fas fa-external-link-alt"></i> Ver painel
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="tech-section scroll-reveal">
+      <div class="container">
+        <h2 class="section-title">Tecnologias & Ferramentas</h2>
+        <div class="tech-grid">
+          <div class="tech-category">
+            <h3>Linguagens</h3>
+            <div class="tech-items">
+              <div class="tech-item scroll-reveal-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <h3>Frameworks</h3>
+            <div class="tech-items">
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-flask"></i>
+                <span>Flask / Streamlit</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Dash / Plotly</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-table"></i>
+                <span>Pandas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <h3>Ferramentas</h3>
+            <div class="tech-items">
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Power BI</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-map"></i>
+                <span>ArcGIS</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-satellite"></i>
+                <span>Google Earth Engine</span>
+              </div>
+              <div class="tech-item scroll-reveal-item">
+                <i class="fas fa-server"></i>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="contato" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Vamos Conversar?</h2>
+      <p class="section-subtitle">A SL Geo está disponível para projetos, consultoria e parcerias.</p>
+
+      <div class="contact-grid">
+        <a href="mailto:silviolemosamn@gmail.com" class="contact-card scroll-reveal-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>E-mail</h3>
+          <p>silviolemosamn@gmail.com</p>
+        </a>
+
+        <a href="https://wa.me/5591991284476" target="_blank" class="contact-card scroll-reveal-item">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>+55 (91) 99128-4476</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/silvio-lemos-75219096/" target="_blank" class="contact-card scroll-reveal-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>SL Geo / Contato</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 SL Geo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Filtros de projeto
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+            card.classList.add('fade-in');
+          } else {
+            card.classList.remove('fade-in');
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Smooth scrolling para links de navegação
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Scrollytelling - Observer para revelar elementos
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.scroll-reveal, .scroll-reveal-item').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
