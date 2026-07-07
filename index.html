@@ -310,6 +310,47 @@
       font-size: 30px; color: var(--brand-blue); margin-bottom: 36px;
     }
 
+    /* Temas */
+    .themes-container {
+      margin-bottom: 40px;
+    }
+
+    .theme-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .theme-btn {
+      padding: 10px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px var(--card-shadow);
+    }
+
+    .theme-btn:hover,
+    .theme-btn.active {
+      background: var(--brand-blue);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--card-shadow-h);
+    }
+
+    .theme-description {
+      font-size: 16px;
+      color: var(--txt-muted);
+      margin-bottom: 20px;
+      padding: 15px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border-left: 4px solid var(--brand-blue);
+    }
+
     .solutions-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
@@ -488,6 +529,7 @@
       .hero__content h1 { font-size: 34px; }
       .hero__content p  { font-size: 16px; }
       .footer-top { gap: 28px; }
+      .theme-selector { justify-content: center; }
     }
 
     /* ══════════════════════════════════════
@@ -555,6 +597,10 @@
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 6px; }
       .social-links { gap: 8px; }
       .social-btn { font-size: 12px; padding: 7px 12px; }
+      
+      /* Temas */
+      .theme-selector { flex-direction: column; align-items: center; }
+      .theme-btn { width: 100%; max-width: 300px; text-align: center; }
     }
 
     /* ══════════════════════════════════════
@@ -651,9 +697,24 @@
 
     <section id="solucoes">
       <h2 class="solutions-title fade-up">Soluções Geoespaciais</h2>
+      
+      <div class="themes-container fade-up">
+        <div class="theme-selector">
+          <button class="theme-btn active" data-theme="todos">Todos</button>
+          <button class="theme-btn" data-theme="costeiro">Monitoramento Costeiro</button>
+          <button class="theme-btn" data-theme="urbano">Monitoramento Urbano</button>
+          <button class="theme-btn" data-theme="climatico">Monitoramento Climático</button>
+          <button class="theme-btn" data-theme="ambiental">Monitoramento Ambiental</button>
+        </div>
+        
+        <div class="theme-description" id="themeDescription">
+          Selecione um tema acima para filtrar as soluções disponíveis
+        </div>
+      </div>
+      
       <div class="solutions-grid">
-
-        <article class="card fade-up">
+        <!-- Monitoramento Costeiro -->
+        <article class="card fade-up" data-themes="costeiro,todos">
           <div class="card-img-wrap">
             <img src="img1.jpg" alt="Erosão Costeira" class="card-img">
             <span class="card-badge online">🟢 Online</span>
@@ -667,7 +728,7 @@
           </div>
         </article>
 
-        <article class="card fade-up">
+        <article class="card fade-up" data-themes="costeiro,todos">
           <div class="card-img-wrap">
             <img src="img2.jpg" alt="Mudança de Linha de Costa" class="card-img">
             <span class="card-badge online">🟢 Online</span>
@@ -681,7 +742,8 @@
           </div>
         </article>
 
-        <article class="card fade-up">
+        <!-- Monitoramento Urbano -->
+        <article class="card fade-up" data-themes="urbano,todos">
           <div class="card-img-wrap">
             <img src="img3.jpg" alt="Registro de Alagamentos" class="card-img">
             <span class="card-badge online">🟢 Online</span>
@@ -690,12 +752,12 @@
             <h3>Mapeamento de Alagamentos</h3>
             <p>Solução voltada à Defesa Civil e Planejamento. Centralize registros de pontos de alagamento, permitindo visualizações espaciais imediatas para gestão de infraestrutura urbana.</p>
             <div class="btn-container">
-              <a href="https://pontos-alagamento-mdr.onrender.com/" class="btn-link" target="_blank">Acessar Dashboard</a>
+              <a href="https://painel-monitoramento-pontos-alagamento.onrender.com/" class="btn-link" target="_blank">Acessar Dashboard</a>
             </div>
           </div>
         </article>
 
-        <article class="card fade-up">
+        <article class="card fade-up" data-themes="urbano,todos">
           <div class="card-img-wrap">
             <img src="img4.jpg" alt="Painel Alagamentos" class="card-img">
             <span class="card-badge online">🟢 Online</span>
@@ -704,12 +766,113 @@
             <h3>Gestão de Riscos de Alagamento</h3>
             <p>Painel analítico para monitoramento sistemático de inundações. Identifique áreas críticas e horários de recorrência para otimizar operações de segurança pública e preventiva.</p>
             <div class="btn-container">
-              <a href="https://painel-monitoramento-pontos-alagamento.onrender.com/" class="btn-link" target="_blank">Acessar Dashboard</a>
+              <a href="https://painel-monitoramento-pontos-alagamento-c8ia.onrender.com/" class="btn-link" target="_blank">Acessar Dashboard</a>
             </div>
           </div>
         </article>
 
-        <article class="card fade-up">
+        <article class="card fade-up" data-themes="urbano,todos">
+          <div class="card-img-wrap">
+            <img src="img11.jpg" alt="Drenagem Urbana" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Monitoramento de Drenagem Urbana</h3>
+            <p>Sistema de monitoramento de sistemas de drenagem urbana, com indicadores de eficiência e alertas para manutenção preventiva da infraestrutura.</p>
+            <div class="btn-container">
+              <a href="https://augusto-correa-pa-drenagem.streamlit.app/" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Monitoramento Climático -->
+        <article class="card fade-up" data-themes="climatico,todos">
+          <div class="card-img-wrap">
+            <img src="img6.jpg" alt="Previsão de Chuvas" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Painel de Monitoramento de Previsão de Chuvas</h3>
+            <p>Ferramenta interativa para acompanhamento das previsões meteorológicas em tempo real, com foco em eventos extremos e alertas hidrológicos para regiões vulneráveis.</p>
+            <div class="btn-container">
+              <a href="https://previsao-chuva-maedorio-pa.streamlit.app/" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade-up" data-themes="climatico,todos">
+          <div class="card-img-wrap">
+            <img src="img7.jpg" alt="Dados Climáticos" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Dados Climáticos do Brasil</h3>
+            <p>Plataforma completa para análise de dados climáticos históricos e em tempo real do Brasil, com ênfase no monitoramento pluviométrico e padrões de precipitação.</p>
+            <div class="btn-container">
+              <a href="https://xertica-gen-ai-br.projects.earthengine.app/view/monitoramento-de-pluviometria-no-brasil" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade-up" data-themes="climatico,todos">
+          <div class="card-img-wrap">
+            <img src="img10.jpg" alt="Balanço Hídrico" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Balanço Hídrico Interativo</h3>
+            <p>Ferramenta de análise interativa para avaliação do balanço hídrico em diferentes escalas territoriais, com indicadores de disponibilidade e demanda hídrica.</p>
+            <div class="btn-container">
+              <a href="https://ee-geoanalises.projects.earthengine.app/view/analisebalancohidrico" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Monitoramento Ambiental -->
+        <article class="card fade-up" data-themes="ambiental,todos">
+          <div class="card-img-wrap">
+            <img src="img8.jpg" alt="Queimadas" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Monitoramento de Queimadas no Brasil</h3>
+            <p>Sistema avançado de detecção e monitoramento de focos de queimadas em todo território brasileiro, com dados atualizados em tempo real via satélite.</p>
+            <div class="btn-container">
+              <a href="https://xertica-gen-ai-br.projects.earthengine.app/view/monitoramento-de-queimadas-no-brasil" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade-up" data-themes="ambiental,todos">
+          <div class="card-img-wrap">
+            <img src="img9.jpg" alt="Supressão da Vegetação" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Monitoramento Supressão da Vegetação</h3>
+            <p>Dashboard especializado para monitorar a supressão da vegetação nativa, com análises temporais e espaciais integradas ao Cadastro Ambiental Rural (CAR).</p>
+            <div class="btn-container">
+              <a href="https://observatorio-social-1-uesc.hub.arcgis.com/pages/d72f7d8ccdba4cb0ac280060952ddcbd" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card fade-up" data-themes="ambiental,todos">
+          <div class="card-img-wrap">
+            <img src="img12.jpg" alt="Distribuição do CAR" class="card-img">
+            <span class="card-badge online">🟢 Online</span>
+          </div>
+          <div class="card-body">
+            <h3>Distribuição Espacial do CAR</h3>
+            <p>Mapa interativo da distribuição espacial do Cadastro Ambiental Rural (CAR) no território nacional, com filtros por bioma, estado e município.</p>
+            <div class="btn-container">
+              <a href="https://sistemicaconsultoriaagronomica.github.io/distribuicao_car/" class="btn-link" target="_blank">Acessar Dashboard</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Visualizador Web de Camadas (sem tema específico) -->
+        <article class="card fade-up" data-themes="todos">
           <div class="card-img-wrap">
             <img src="img5.jpg" alt="Visualizador Web" class="card-img">
             <span class="card-badge update">🔄 Em atualização</span>
@@ -722,7 +885,6 @@
             </div>
           </div>
         </article>
-
       </div>
     </section>
 
@@ -791,6 +953,13 @@
             <li><a href="https://pontos-alagamento-mdr.onrender.com/" target="_blank">Mapeamento de Alagamentos</a></li>
             <li><a href="https://painel-monitoramento-pontos-alagamento-c8ia.onrender.com/" target="_blank">Gestão de Riscos</a></li>
             <li><a href="https://cartogeo-br.github.io/visualizador_web/" target="_blank">Visualizador Web</a></li>
+            <li><a href="https://previsao-chuva-maedorio-pa.streamlit.app/" target="_blank">Painel de Monitoramento de Previsão de Chuvas</a></li>
+            <li><a href="https://xertica-gen-ai-br.projects.earthengine.app/view/monitoramento-de-pluviometria-no-brasil" target="_blank">Dados Climáticos do Brasil</a></li>
+            <li><a href="https://xertica-gen-ai-br.projects.earthengine.app/view/monitoramento-de-queimadas-no-brasil" target="_blank">Monitoramento de Queimadas no Brasil</a></li>
+            <li><a href="https://observatorio-social-1-uesc.hub.arcgis.com/pages/d72f7d8ccdba4cb0ac280060952ddcbd" target="_blank">Monitoramento Supressão da Vegetação</a></li>
+            <li><a href="https://ee-geoanalises.projects.earthengine.app/view/analisebalancohidrico" target="_blank">Balanço Hídrico Interativo</a></li>
+            <li><a href="https://augusto-correa-pa-drenagem.streamlit.app/" target="_blank">Monitoramento de Drenagem Urbana</a></li>
+            <li><a href="https://sistemicaconsultoriaagronomica.github.io/distribuicao_car/" target="_blank">Distribuição Espacial do CAR</a></li>
           </ul>
         </div>
 
@@ -938,6 +1107,50 @@
 
     window.addEventListener('scroll', updateActiveNav);
     window.addEventListener('load', updateActiveNav);
+
+    // ── Filtragem por Temas ──
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeButtons = document.querySelectorAll('.theme-btn');
+      const cards = document.querySelectorAll('.card');
+      const themeDescription = document.getElementById('themeDescription');
+      
+      const descriptions = {
+        'todos': 'Todas as soluções geoespaciais disponíveis',
+        'costeiro': 'Soluções especializadas para monitoramento e gestão de áreas costeiras',
+        'urbano': 'Ferramentas para gestão e monitoramento de ambientes urbanos',
+        'climatico': 'Dashboards e sistemas para monitoramento de variáveis climáticas',
+        'ambiental': 'Soluções para monitoramento e gestão de recursos naturais e ambientais'
+      };
+
+      themeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Atualizar botões ativos
+          themeButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          const selectedTheme = this.getAttribute('data-theme');
+          
+          // Atualizar descrição do tema
+          themeDescription.textContent = descriptions[selectedTheme];
+          
+          // Filtrar cards
+          cards.forEach(card => {
+            const cardThemes = card.getAttribute('data-themes').split(',');
+            
+            if (selectedTheme === 'todos' || cardThemes.includes(selectedTheme)) {
+              card.style.display = 'flex';
+              // Adicionar classe para animação
+              setTimeout(() => {
+                card.classList.add('visible');
+              }, 50);
+            } else {
+              card.style.display = 'none';
+              card.classList.remove('visible');
+            }
+          });
+        });
+      });
+    });
   </script>
 
 </body>
